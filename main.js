@@ -77,18 +77,19 @@ function signin() {
 
     }
 }
- function sendMail3(){
-    emailjs.send('service_7q1sn6s', 'template_v7f98gs')
-    .then(function(res){
-        // console.log("Success", res.status);
-        alert("mail sent successfully");
-    })
-}
+function sendMail3(){
+    emailjs.send("service_ktxhqfp","template_3nh5piq");
+   
+    }
+
 function sendMail2(){
-    emailjs.send('service_7q1sn6s', 'template_ogw30ms')
-    .then(function(res){
-        // console.log("Success", res.status);
-        alert("mail sent successfully");
+    var params ={
+        emailid : document.getElementById('inmail').value,
+       
+    }
+    alert("mail sent successfully");
+    emailjs.send("service_ktxhqfp","template_3nh5piq", params).then(function (res) {
+        alert("success!"+ res.status);
     })
 }
 
