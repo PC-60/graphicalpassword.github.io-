@@ -91,8 +91,7 @@ function sendMail3(){
 
 function sendMail2(){
     var params ={
-        emailid : document.getElementById('inmail').value,
-       
+        emailid : document.getElementById('inmail').value
     }
     alert("mail sent successfully");
     emailjs.send("service_ktxhqfp","template_3nh5piq", params).then(function (res) {
