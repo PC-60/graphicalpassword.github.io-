@@ -78,8 +78,15 @@ function signin() {
     }
 }
 function sendMail3(){
-    emailjs.send("service_ktxhqfp","template_3nh5piq");
-   
+    var params ={
+        emailid : document.getElementById('inmail').value,
+       
+    }
+    alert("mail sent successfully");
+    emailjs.send("service_ktxhqfp","template_3nh5piq", params).then(function (res) {
+        alert("success!"+ res.status);
+    })
+    
     }
 
 function sendMail2(){
